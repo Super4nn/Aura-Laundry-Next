@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Head from 'next/head';
 import './globals.css' 
 
 const geistSans = Geist({
@@ -26,6 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+      <Head>
+        <meta name="google-site-verification" content="w1fbbTS-OKgnkzOIXu0oV8mmjLnO-OZvLkhJrsghJ1w" />
+      </Head>
       <body>{children}</body>
     </html>
   );
